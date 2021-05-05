@@ -6,7 +6,7 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(23, GPIO.OUT)
 GPIO.setup(24, GPIO.OUT)
 
-GPIO.setup(18 , GPIO.IN)
+GPIO.setup(25, GPIO.IN)
 
 print "Press the button"
 
@@ -15,7 +15,7 @@ try:
         GPIO.output(23, False)
         GPIO.output(24, False)
 
-        if GPIO.input(18)==0:
+        if GPIO.input(25)==1:
             print "Button pressed!"
         
             GPIO.output(23, True)
